@@ -1,0 +1,6 @@
+framework module MLPagerView {
+  umbrella header "MLPagerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
