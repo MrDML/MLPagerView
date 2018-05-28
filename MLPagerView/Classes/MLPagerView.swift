@@ -34,7 +34,7 @@ enum MLTransitionStyle {
     
 }
 
-class MLPagerViewDelegateForwarder: NSObject,UIScrollViewDelegate {
+ class MLPagerViewDelegateForwarder: NSObject,UIScrollViewDelegate {
     
    weak var pagerView:MLPagerView!
    weak var delegate:MLPagerViewDelegate?
@@ -70,7 +70,7 @@ class MLPagerViewDelegateForwarder: NSObject,UIScrollViewDelegate {
     
 }
 
-class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate {
+open class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate {
   private  var forwarder:MLPagerViewDelegateForwarder!
   private  var count: Int = 0
   private  var index: Int = 0
@@ -96,7 +96,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         return pages.reversed()
     }
     
-    @IBOutlet override weak var delegate: UIScrollViewDelegate?{
+    @IBOutlet override weak open var delegate: UIScrollViewDelegate?{
         set{
             super.delegate = nil
             forwarder.delegate = newValue as? MLPagerViewDelegate;
@@ -113,7 +113,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         self.initialize()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
     }
@@ -134,7 +134,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
     }
     
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         if count <= 0{
@@ -292,7 +292,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         }
     }
     
-    override func setContentOffset(_ contentOffset: CGPoint, animated: Bool) {
+    override open func setContentOffset(_ contentOffset: CGPoint, animated: Bool) {
         
         if fmod(self.contentOffset.x, self.bounds.size.width) == 0{
             
@@ -368,7 +368,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
     
 
     // MARK:UIScrollViewDelegate
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         let pageIndex = Int(scrollView.contentOffset.x / self.bounds.size.width)
         self.index = pageIndex;
@@ -378,7 +378,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         self.didMovePagerAtIndex(index: pageIndex)
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
          let pageIndex = Int(targetContentOffset.pointee.x / scrollView.bounds.size.width)
         self.willMovePagerAtIndex(index: pageIndex)
@@ -389,7 +389,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         
     }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public  func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         
         self.didMovePagerAtIndex(index: self.index)
         
@@ -400,7 +400,7 @@ class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDelegate
         
     }
     // MARK: UIGestureRecognizerDelegate
-    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         
         if gestureRecognizer.isKind(of: UIPanGestureRecognizer.self){
             let gestureRecognizertemp = gestureRecognizer as! UIPanGestureRecognizer

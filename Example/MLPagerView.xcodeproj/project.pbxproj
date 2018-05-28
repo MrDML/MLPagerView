@@ -42,11 +42,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		675909A0D47D93D5C227F422 /* Pods-MLPagerView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLPagerView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLPagerView_Example/Pods-MLPagerView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		952F91895A4E02A330B22CBC /* MLPagerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MLPagerView.podspec; path = ../MLPagerView.podspec; sourceTree = "<group>"; };
+		952F91895A4E02A330B22CBC /* MLPagerView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MLPagerView.podspec; path = ../MLPagerView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CE983A701F28C020D6E8431E /* Pods-MLPagerView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLPagerView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLPagerView_Example/Pods-MLPagerView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E333CABE3CF2F98A82831777 /* Pods-MLPagerView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLPagerView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLPagerView_Tests/Pods-MLPagerView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E885DB617CE119C701A4E0CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		F9586ED8697F83BE2D6E4F4D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E885DB617CE119C701A4E0CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F9586ED8697F83BE2D6E4F4D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
