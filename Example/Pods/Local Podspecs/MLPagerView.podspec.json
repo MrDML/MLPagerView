@@ -1,8 +1,8 @@
 {
   "name": "MLPagerView",
   "version": "0.1.0",
-  "summary": "A short description of MLPagerView.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "MLPagerView.",
+  "description": "MLPagerView for Swift.",
   "homepage": "https://github.com/MrDML/MLPagerView",
   "license": {
     "type": "MIT",

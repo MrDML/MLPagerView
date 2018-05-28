@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'MLPagerView_Example' do
-  pod 'MLPagerView', :path => '../'
+  pod 'MLPagerView', :path => '../MLPagerView.podspec'
 
   target 'MLPagerView_Tests' do
     inherit! :search_paths
