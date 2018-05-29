@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - MLPagerView (0.1.0)
+  - MLPagerView (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  MLPagerView: ed0a9cf3d563cb23c5b397022a1954397c715d2b
+  MLPagerView: c609c3c49a57320b4b284fd9dc5bd26126de54c6
 
 PODFILE CHECKSUM: 55e329431c0f55fc50263ea4ac4d28c95bd190cc
 

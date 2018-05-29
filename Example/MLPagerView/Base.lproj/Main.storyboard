@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vrg-Et-cdi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MLPagerView_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +20,48 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ole-qA-sxa" customClass="MLPagerView" customModule="MLPagerView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="eyN-wF-rs6"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="IDz-vj-p6W"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ole-qA-sxa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="FPU-tr-Cfr"/>
+                            <constraint firstAttribute="trailing" secondItem="Ole-qA-sxa" secondAttribute="trailing" id="H8C-wd-FIj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ole-qA-sxa" secondAttribute="bottom" id="UBE-ES-spB"/>
+                            <constraint firstItem="Ole-qA-sxa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lMK-at-fYP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MLPagerView" id="oXA-mQ-pFF"/>
+                    <connections>
+                        <outlet property="pagerView" destination="Ole-qA-sxa" id="GPG-oY-MOz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1031" y="-65"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SsD-fa-4ze">
+            <objects>
+                <navigationController id="vrg-Et-cdi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QcK-ro-naN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="iIO-JN-5x4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVs-12-XFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1684" y="-65"/>
         </scene>
     </scenes>
 </document>

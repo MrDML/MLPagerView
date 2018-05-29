@@ -13,7 +13,7 @@ enum MLTransitionStyle {
     case MLTransitionStyleTab
 }
 
-@objc protocol MLPagerViewDelegate:class, UIScrollViewDelegate {
+@objc public protocol MLPagerViewDelegate:class, UIScrollViewDelegate {
  
    @objc optional func pagerView(pagerView:MLPagerView,willDispalyPage page:UIView, atIndex index:Int)
     
@@ -26,7 +26,7 @@ enum MLTransitionStyle {
     
 }
 
-@objc protocol MLPagerViewDatasource:class {
+@objc public protocol MLPagerViewDatasource:class {
     
     func numberOfPagesInPagerView(pageview:MLPagerView)-> Int
     
@@ -106,7 +106,7 @@ open class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDel
             return forwarder.delegate
         }
     }
-   @IBOutlet weak var dataSource: MLPagerViewDatasource?;
+   @IBOutlet weak  var dataSource: MLPagerViewDatasource?;
     
     override init(frame: CGRect) {
         super.init(frame: frame);
@@ -416,7 +416,7 @@ open class MLPagerView: UIScrollView,UIScrollViewDelegate,UIGestureRecognizerDel
 }
 
 private var identifireKey:String = "identifireKey"
-extension UIView {
+public extension UIView {
      var identifire:String?{
         get{
             return objc_getAssociatedObject(self, &identifireKey) as? String
